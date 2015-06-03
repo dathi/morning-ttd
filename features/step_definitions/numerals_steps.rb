@@ -7,7 +7,7 @@ When(/^I enter (\d+) into my field$/) do |arg1|
 end
 
 When(/^I press submit$/) do
-  pending # express the regexp above with the code you wish you had
+  click_button 'Submit'
 end
 
 Then(/^I see "(.*?)" as a result$/) do |arg1|
