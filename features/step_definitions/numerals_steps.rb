@@ -2,14 +2,15 @@ Given(/^I am on the main page$/) do
   visit root_path
 end
 
-When(/^I enter (\d+) into my field$/) do |arg1|
-  fill_in 'number', :with => arg1
+When(/^I enter (\d+) into my field$/) do |number|
+	@number = number
+  fill_in "number", :with => @number
 end
 
 When(/^I press submit$/) do
-  click_button 'Submit'
+  click_button "Submit"
 end
 
-Then(/^I see "(.*?)" as a result$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^I see "(.*?)" as a result$/) do |word|
+  expect(page).to have_content(word)
 end

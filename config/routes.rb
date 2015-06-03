@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resources :main
+  post "main/index"
   root :to => "main#index"
 end
