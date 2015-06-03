@@ -1,5 +1,5 @@
 Given(/^I am on the main page$/) do
-  pending # express the regexp above with the code you wish you had
+  visit root_path
 end
 
 When(/^I enter (\d+) into my field$/) do |arg1|
